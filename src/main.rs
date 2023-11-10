@@ -15,7 +15,7 @@ fn main() {
 }
 
 fn bubble_sort(mut data_list: Vec<i32>) -> Vec<i32>{
-    for i in 0..data_list.len() {
+    for i in 0..data_list.len()-1 {
         for j in i..data_list.len() {
             if data_list[i] > data_list[j] {
                 data_list.swap(i, j);
@@ -26,7 +26,7 @@ fn bubble_sort(mut data_list: Vec<i32>) -> Vec<i32>{
 }
 
 fn bubble_sort_t<T: PartialOrd>(mut data_list: Vec<T>) -> Vec<T>{
-    for i in 0..data_list.len() {
+    for i in 0..data_list.len()-1 {
         for j in i..data_list.len() {
             if data_list[i] > data_list[j] {
                 data_list.swap(i, j);
